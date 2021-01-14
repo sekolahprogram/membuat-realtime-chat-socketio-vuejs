@@ -44,7 +44,7 @@ import io from 'socket.io-client'
 export default {
     data() {
         return {
-            socket: io(),
+            socket: io('http://localhost:3000'),
             name: '',
             content: '',
             data: []

@@ -2,7 +2,7 @@ const app = require("express")()
 const server = require("http").createServer(app)
 const io = require("socket.io")(server, {
     cors: {
-        origin: 'https://sekolahprogram.github.io/membuat-realtime-chat-socketio-vuejs'
+        origin: 'http://localhost:8080'
     }
 })
 
@@ -13,4 +13,6 @@ io.on('connection', (socket) => {
     })
 })
 
-server.listen()
+server.listen(3000, () => {
+    console.log('listening on localhost:3000');
+})
